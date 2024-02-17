@@ -1,0 +1,25 @@
+{
+    "development": {
+        "username": "root",
+        "password": "root",
+        "database": "erp",
+        "host": "172.19.0.1",
+        "dialect": "mysql"
+    },
+
+    "test": {
+        "username": "admin",
+        "password": "raquel1989",
+        "database": "sys",
+        "host": "database-1.cx2084ygiadx.us-east-2.rds.amazonaws.com",
+        "dialect": "mysql"
+    },
+
+    "production": {
+        "username": "root",
+        "password": "your_password",
+        "database": "your_database_production",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    }
+}

@@ -10,7 +10,7 @@
     "test": {
         "username": "admin",
         "password": "raquel1989",
-        "database": "sys",
+        "database": "erp",
         "host": "database-1.cx2084ygiadx.us-east-2.rds.amazonaws.com",
         "dialect": "mysql"
     },

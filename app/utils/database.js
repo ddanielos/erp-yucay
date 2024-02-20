@@ -20,4 +20,5 @@ async function connectionTest(){
     }
 }
 
-connectionTest();
+module.exports = { sequelize, connectionTest };
+//connectionTest()

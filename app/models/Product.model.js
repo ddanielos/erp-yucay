@@ -1,9 +1,7 @@
 const { DataTypes, Model } = require("sequelize");
 const { sequelize } = require('../utils/database');
 
-class Product extends Model {}
-
-Product.init({
+const ProductSchema = {
     product_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -33,9 +31,21 @@ Product.init({
         type: DataTypes.FLOAT,
         allowNull: false
     }
-}, {
-    sequelize,
-    modelName: 'product'
-});
+}
+
+class Product extends Model {
+
+    static config(sequelize){
+        return {
+            sequelize,
+            modelName: 'product'
+        }
+    }
+}
+
+Product.init(
+    ProductSchema,
+    Product.config(sequelize)
+);
 
 module.exports = Product;

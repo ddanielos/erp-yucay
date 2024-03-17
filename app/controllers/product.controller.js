@@ -26,7 +26,7 @@ async function getOneProduct(req,res){
 async function createProduct(req, res) {
     const dataProduct = req.body;
     try {
-        const newProduct = await Product.create({ 
+        const newProduct = await Product.create({
             product_name: dataProduct.product_name,
             product_description: dataProduct.product_description,
             unit: dataProduct.unit,

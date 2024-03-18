@@ -2,8 +2,8 @@ const { DataTypes, Model } = require("sequelize");
 //const { DataTypes } = require("sequelize"); //eliminar
 
 
-const { sequelize } = require('../utils/database');
-
+//const { sequelize } = require('../utils/database');
+const { sequelize } = require('../models/index')
 class DocumentType extends Model {}
 
 DocumentType.init({

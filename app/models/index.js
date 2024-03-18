@@ -1,20 +1,9 @@
 require('dotenv').config();
 const { Sequelize } = require('sequelize');
-const config = require('../../config/config.json')['development'];
+const {config} = require('../utils/database');
 
-module.exports = config;
-/*
-{
-    config,
-    username: 'root',
-    password: "root",
-    database: "erp",
-    host: "localhost",
-    dialect:'mysql'
-}
-*/
+const db = {}
 
-/*
 const sequelize = new Sequelize(
     config.database,
     config.username,
@@ -35,7 +24,6 @@ async function connectionTest(){
     }
 }
 
-module.exports = { sequelize, config, connectionTest };
-//connectionTest()
+db.sequelize = sequelize;
 
-*/
+module.exports = db;

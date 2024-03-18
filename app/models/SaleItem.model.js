@@ -1,9 +1,9 @@
 const { DataTypes, Model } = require("sequelize");
-const { sequelize } = require('../utils/database');
+//const { sequelize } = require('../utils/database');
 const Sale = require('./Sale.model');
 const Warehouse = require('./Warehouse.model');
 const Product = require('./Product.model');
-
+const { sequelize } = require('../models/index')
 class SaleItem extends Model {}
 
 SaleItem.init({

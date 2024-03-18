@@ -1,7 +1,7 @@
 const { DataTypes, Model } = require("sequelize");
-const { sequelize } = require('../utils/database');
+//const { sequelize } = require('../utils/database');
 const Sale = require('./Sale.model');
-
+const { sequelize } = require('../models/index')
 class Payment extends Model {}
 
 Payment.init({

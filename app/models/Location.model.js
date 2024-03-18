@@ -1,6 +1,6 @@
 const { DataTypes, Model } = require("sequelize");
-const { sequelize } = require('../utils/database');
-
+//const { sequelize } = require('../utils/database');
+const { sequelize } = require('../models/index')
 class Location extends Model {}
 
 Location.init({

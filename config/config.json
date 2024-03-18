@@ -8,18 +8,18 @@
     },
 
     "test": {
-        "username": "admin",
-        "password": "raquel1989",
+        "username": "root",
+        "password": "root",
         "database": "erp",
-        "host": "database-1.cx2084ygiadx.us-east-2.rds.amazonaws.com",
+        "host": "localhost",
         "dialect": "mysql"
     },
 
     "production": {
         "username": "root",
-        "password": "your_password",
-        "database": "your_database_production",
-        "host": "127.0.0.1",
+        "password": "root",
+        "database": "erp",
+        "host": "localhost",
         "dialect": "mysql"
     }
 }

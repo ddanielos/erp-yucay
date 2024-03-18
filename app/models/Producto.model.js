@@ -1,7 +1,10 @@
-const { DataTypes, Model } = require("sequelize");
+const { DataTypes, Model, Sequelize } = require("sequelize");
 //const { sequelize } = require('../utils/database');
-const { sequelize } = require('../models/index')
-const ProductSchema = {
+//const { sequelize } = require('../models/index')
+
+const TABLE_NAME = 'productos'
+
+const ProductoSchema = {
     product_id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -33,19 +36,25 @@ const ProductSchema = {
     }
 }
 
-class Product extends Model {
+class Producto extends Model {
+    static associate(){}
 
     static config(sequelize){
         return {
             sequelize,
-            modelName: 'product'
+            modelName: 'producto',
+            tableName: TABLE_NAME
         }
     }
 }
 
-Product.init(
-    ProductSchema,
-    Product.config(sequelize)
-);
+// Producto.init(
+//     ProductoSchema,
+//     Producto.config(sequelize)
+// );
 
-module.exports = Product;
+module.exports = {
+    Producto,
+    TABLE_NAME,
+    ProductoSchema
+};

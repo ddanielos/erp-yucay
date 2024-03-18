@@ -5,7 +5,11 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./app.js",
-    "dev": "npx nodemon ./app.js"
+    "dev": "npx nodemon ./app.js",
+    "migrations:generate": "sequelize-cli migration:generate --name",
+    "migrations:run": "sequelize-cli db:migrate",
+    "migrations:revert": "sequelize-cli db:migrate:undo",
+    "migrations:delete": "sequelize-cli db:migrate:undo:all"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +21,7 @@
     "sequelize": "^6.37.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.0.3",
+    "sequelize-cli": "^6.6.2"
   }
 }
